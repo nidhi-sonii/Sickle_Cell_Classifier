@@ -24,10 +24,7 @@ First dense layer with 256 units and ReLU activation.
 Output dense layer with 1 unit and sigmoid activation for binary classification.
 
 Features
-ReLU Activation: Used in the convolutional and dense layers to introduce non-linearity.
-Pooling Layers: Reduce the spatial dimensions of feature maps to prevent overfitting and reduce computation.
-Sigmoid Activation: Outputs a probability for binary classification.
-Flatten Layer: Converts 2D feature maps to a format suitable for dense layers.
+Contains a ReLU Activation function, Pooling Layers, Sigmoid Activation and a Flatten Layer.
 
 ### Variant 2: EfficientNetB0 with K-Fold Cross-Validation
 
