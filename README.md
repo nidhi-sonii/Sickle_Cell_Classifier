@@ -58,14 +58,12 @@ Key Metrics: Outputs comprehensive performance metrics, including precision, rec
 Features of this Variant:
 - **Pre-trained DenseNet121:** Leverages the power of a deep convolutional network pre-trained on a large dataset (ImageNet) to extract meaningful features from the medical images. Fine-tuning is applied to adapt the model to the specific sickle cell classification task.
 - **Data Loading and Preprocessing:** Images are loaded, resized to a target size of 224x224, and normalized.
-- **Handling Imbalanced Data:** Employs a combination of **Random Under-sampling** and **SMOTE (Synthetic Minority Over-sampling Technique)** to address potential class imbalance in the dataset, ensuring the model doesn't unfairly favor the majority class.
 - **Data Augmentation:** Uses the **Albumentations** library to apply various random transformations to the training images (e.g., rotation, brightness changes, blurring). This significantly increases the size and variability of the training data, helping the model generalize better and reduce overfitting.
 - **K-Fold Cross-Validation:** The training data is split into multiple folds (5 in this case), and the model is trained and evaluated on different combinations of these folds. This provides a more reliable estimate of the model's performance and helps assess its stability.
 - **Model Architecture:** Builds a Sequential model on top of the pre-trained DenseNet121 base, adding layers for Global Average Pooling, Dense layers with ReLU activation and L2 regularization, Batch Normalization, and Dropout for further regularization. The final layer is a Dense layer with a sigmoid activation for binary classification output.
 - **Training:** The model is compiled with the Adam optimizer and Binary Crossentropy loss. Training is performed for a specified number of epochs within each fold of the cross-validation.
 - **Evaluation:** Performance is evaluated using key metrics like **Precision, Recall, F1 Score, Average Precision, and the Confusion Matrix** on a dedicated test set. The **ROC curve and AUC** are also plotted to visualize the model's trade-off between true positive and false positive rates.
-- **Model Saving:** The trained model is saved for future use.
-- **Training History Visualization:** Plots are generated to visualize the training and validation accuracy and loss over epochs, helping to understand the learning process.
+
 - 
  Model 2: Vision Transformer
 1. Data Preparation
