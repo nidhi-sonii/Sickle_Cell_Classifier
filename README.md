@@ -54,8 +54,8 @@ Visualization:
 Generates a prediction visualization for an individual test image, showing the model's classification result.
 Key Metrics: Outputs comprehensive performance metrics, including precision, recall, F1-score, and ROC AUC, for robust evaluation.
 
-###Variant 4 DENSENET21 AND RESNET50 COMPARISON
-Key Features:
+### Variant 4 DENSENET21 AND RESNET50 COMPARISON
+Features of this Variant:
 - **Pre-trained DenseNet121:** Leverages the power of a deep convolutional network pre-trained on a large dataset (ImageNet) to extract meaningful features from the medical images. Fine-tuning is applied to adapt the model to the specific sickle cell classification task.
 - **Data Loading and Preprocessing:** Images are loaded, resized to a target size of 224x224, and normalized.
 - **Handling Imbalanced Data:** Employs a combination of **Random Under-sampling** and **SMOTE (Synthetic Minority Over-sampling Technique)** to address potential class imbalance in the dataset, ensuring the model doesn't unfairly favor the majority class.
