@@ -65,7 +65,7 @@ Features of this Variant:
 - **Evaluation:** Performance is evaluated using key metrics like **Precision, Recall, F1 Score, Average Precision, and the Confusion Matrix** on a dedicated test set. The **ROC curve and AUC** are also plotted to visualize the model's trade-off between true positive and false positive rates.
 
 - 
- Model 2: Vision Transformer
+### Model 2: Vision Transformer
 1. Data Preparation
 Dataset: The dataset is split into training, validation, and test sets.
 Data Augmentation: Includes transformations like resizing, cropping, and normalization.
@@ -85,7 +85,5 @@ Adjusted the positional embeddings to accommodate the image resolution and patch
 This step ensures compatibility between the model's expected input size and the dataset.
 6. Testing Loop
 Evaluates the trained model on the test set.
-Metrics: Reports average test loss and accuracy.
 7. Visualization
-Displays a selection of test images with their true and predicted labels.
-Helps assess the model's qualitative performance.
+Displays a selection of test images with their true and predicted labels
