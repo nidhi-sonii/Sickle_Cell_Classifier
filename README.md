@@ -63,8 +63,7 @@ Features of this Variant:
 - **Model Architecture:** Builds a Sequential model on top of the pre-trained DenseNet121 base, adding layers for Global Average Pooling, Dense layers with ReLU activation and L2 regularization, Batch Normalization, and Dropout for further regularization. The final layer is a Dense layer with a sigmoid activation for binary classification output.
 - **Training:** The model is compiled with the Adam optimizer and Binary Crossentropy loss. Training is performed for a specified number of epochs within each fold of the cross-validation.
 - **Evaluation:** Performance is evaluated using key metrics like **Precision, Recall, F1 Score, Average Precision, and the Confusion Matrix** on a dedicated test set. The **ROC curve and AUC** are also plotted to visualize the model's trade-off between true positive and false positive rates.
-
-- 
+-  
 ### Model 2: Vision Transformer
 1. Data Preparation
 Dataset: The dataset is split into training, validation, and test sets.
