@@ -2,7 +2,7 @@
 This project aims to classify between healthy and sickle cells using different deep learning methods to compare their performance and output.
 The first model includes four different variants of the Convolutional Neural Network and the other model implements a Vision Transformer.
 
-### Dataset - The dataset is a sickle cell images dataset collected from Teso region in Uganda. This is in the Eastern part of Uganda and from Kumi and Soroti districts specifically. We picked the samples from Kumi Hospital, Soroti Regional Referral Hospital and Soroti University. 140 patients provided their blood samples which were processed using two methods: Field stains and Leichman stains. Their microscopic images were captured and are hereby presented.
+Dataset - The dataset is a sickle cell images dataset collected from Teso region in Uganda. This is in the Eastern part of Uganda and from Kumi and Soroti districts specifically. We picked the samples from Kumi Hospital, Soroti Regional Referral Hospital and Soroti University. 140 patients provided their blood samples which were processed using two methods: Field stains and Leichman stains. Their microscopic images were captured and are hereby presented.
 
 The dataset has 422 positive (sickle cell) images and 147 negative images.
 Due to the small size of the dataset as well as its imbalanced nature, different techniques were implemented throughout some of the variants to deal with this, for example, data augmentation and stratified cross validation.
@@ -26,8 +26,7 @@ Pooling Layers: Reduce the spatial dimensions of feature maps to prevent overfit
 Sigmoid Activation: Outputs a probability for binary classification.
 Flatten Layer: Converts 2D feature maps to a format suitable for dense layers.
 
-###Variant 2
-### Variant: EfficientNetB0 with K-Fold Cross-Validation
+###Variant 2: EfficientNetB0 with K-Fold Cross-Validation
 
 Architecture - Uses **EfficientNetB0** as a pre-trained base model for feature extraction, followed by global average pooling, dropout, and a dense layer with sigmoid activation for binary classification.
 Dataset Handling: Implements manual image loading and labeling, with a `tf.data` pipeline for preprocessing and batching.
@@ -52,8 +51,7 @@ Visualization:
 Generates a prediction visualization for an individual test image, showing the model's classification result.
 Key Metrics: Outputs comprehensive performance metrics, including precision, recall, F1-score, and ROC AUC, for robust evaluation.
 
-###Variant 4:
-# CNN VARIANT 4: DenseNet121 with Data Augmentation and K-Fold Cross-Validation for Sickle Cell Classification
+###Variant 4 DENSENET21 AND RESNET50 COMPARISON
 Key Features:
 - **Pre-trained DenseNet121:** Leverages the power of a deep convolutional network pre-trained on a large dataset (ImageNet) to extract meaningful features from the medical images. Fine-tuning is applied to adapt the model to the specific sickle cell classification task.
 - **Data Loading and Preprocessing:** Images are loaded, resized to a target size of 224x224, and normalized.
@@ -65,6 +63,7 @@ Key Features:
 - **Evaluation:** Performance is evaluated using key metrics like **Precision, Recall, F1 Score, Average Precision, and the Confusion Matrix** on a dedicated test set. The **ROC curve and AUC** are also plotted to visualize the model's trade-off between true positive and false positive rates.
 - **Model Saving:** The trained model is saved for future use.
 - **Training History Visualization:** Plots are generated to visualize the training and validation accuracy and loss over epochs, helping to understand the learning process.
+- 
  Model 2: Vision Transformer
 1. Data Preparation
 Dataset: The dataset is split into training, validation, and test sets.
